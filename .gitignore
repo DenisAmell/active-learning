@@ -1,0 +1,66 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Downloaded datasets
+/data/
+
+# Coursework document sources and generated document
+/build_coursework_docx.py
+/doc_assets/
+/*.docx
+
+# Experiment outputs and temporary checks
+/results/
+/smoke_*/
+/gtsrb_*_test/
+
+# DOCX/PDF render previews used for visual QA
+/rendered*/
+
+# Model checkpoints and exported models
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Training logs
+/runs/
+/logs/
+/lightning_logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary Microsoft Office files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
