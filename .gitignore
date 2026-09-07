@@ -28,6 +28,7 @@ dist/
 /generate_coursework_figure.py
 /doc_assets/
 /*.docx
+/output/
 
 # Experiment outputs and temporary checks
 /results/
