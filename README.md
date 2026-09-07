@@ -100,7 +100,9 @@ LC(x) = 1 - max p(c | x)
 ```text
 gtsrb-active-learning-gost/
 ├── active_learning_gtsrb.py       # обучение и активный выбор данных
+├── active_learning_gtsrb.ipynb    # интерактивный разбор основных этапов
 ├── requirements.txt               # зависимости Python
+├── requirements-notebook.txt      # дополнительные зависимости Jupyter
 ├── README.md                      # документация проекта
 └── .gitignore                     # исключение данных и локальных файлов
 ```
@@ -163,8 +165,8 @@ Dataclass содержит все параметры эксперимента. �
 ### macOS и Linux
 
 ```bash
-git clone <URL-репозитория>
-cd gtsrb-active-learning-gost
+git clone https://github.com/DenisAmell/active-learning.git
+cd active-learning
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -172,17 +174,48 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+Для работы с Jupyter Notebook установите дополнительные зависимости:
+
+```bash
+pip install -r requirements-notebook.txt
+```
+
 ### Windows PowerShell
 
 ```powershell
-git clone <URL-репозитория>
-cd gtsrb-active-learning-gost
+git clone https://github.com/DenisAmell/active-learning.git
+cd active-learning
 
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+Для работы с Jupyter Notebook:
+
+```powershell
+pip install -r requirements-notebook.txt
+```
+
+## Jupyter Notebook
+
+Блокнот `active_learning_gtsrb.ipynb` содержит краткий интерактивный разбор проекта:
+
+- математические формулы entropy, margin и least confidence;
+- демонстрацию поведения стратегий на искусственных вероятностях;
+- необязательный просмотр примеров GTSRB;
+- компактную конфигурацию активного обучения;
+- запуск полного цикла для entropy, margin и random;
+- построение графиков test accuracy и test macro-F1.
+
+Запуск:
+
+```bash
+jupyter lab active_learning_gtsrb.ipynb
+```
+
+Загрузка GTSRB и обучение выключены в блокноте по умолчанию. Для просмотра данных установите `LOAD_PREVIEW = True`, а для запуска эксперимента - `RUN_EXPERIMENT = True` в соответствующих ячейках.
 
 ## Запуск
 

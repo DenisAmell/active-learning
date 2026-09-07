@@ -24,6 +24,8 @@ dist/
 
 # Coursework document sources and generated document
 /build_coursework_docx.py
+/generate_coursework_equations.py
+/generate_coursework_figure.py
 /doc_assets/
 /*.docx
 
